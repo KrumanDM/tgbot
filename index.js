@@ -49,7 +49,7 @@ bot.on("message", async msg => {
         if (data === '/again'){
             return startGame(chatId)
         }
-        if (data === chats[chatId]) {
+        if (data == chats[chatId]) {
             return await bot.sendMessage (chatId, `Поздравляю, ты отгадал цифру ${chats[chatId]}`, againOptions);
         } else {
             return await bot.sendMessage (chatId, `К сожалению ты не отгадал, бот загадал цифру ${chats[chatId]}`, againOptions)
